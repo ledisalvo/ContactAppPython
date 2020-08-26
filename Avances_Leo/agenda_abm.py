@@ -114,7 +114,7 @@ def read_contacts():
 
 def search_contact():
     email = input('Ingrese el mail de la persona: ')
-    return contacts.index(next((sub for sub in contacts if sub['email'] == email), None))
+    return contacts.index(next((contact for contact in contacts if contact['email'] == email), None))
 
 def modify_contact(field_name, index, key_name):
     new_value = input(field_name + ' actual: ' + contacts[index][key_name] + ' nuevo: ')
